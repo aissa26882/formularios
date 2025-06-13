@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Formulario 4</title>
+<link rel="stylesheet" href="../css/estilo.css">
+<script src="../js/validation.js"></script>
+</head>
+<body>
+  <h1>Formulario 4: Información de Producto</h1>
+  <form id="form4" onsubmit="return validateForm(event, this)">
+    <label for="nombreProducto">Nombre del Producto:</label>
+    <input type="text" id="nombreProducto" name="nombreProducto" required><br><br>
+    <label for="precio">Precio:</label>
+    <input type="number" id="precio" name="precio" min="0" step="0.01" required><br><br>
+    <label for="cantidad">Cantidad:</label>
+    <input type="number" id="cantidad" name="cantidad" min="1" required><br><br>
+    <input type="submit" value="Enviar">
+  </form>
+</body>
+</html>

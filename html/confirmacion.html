@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Confirmación</title>
+<link rel="stylesheet" href="../css/estilo.css">
+</head>
+<body>
+  <h1>Confirmación</h1>
+  <p>Los datos han sido enviados correctamente.</p>
+  <div id="data"></div>
+  <script>
+    const data = JSON.parse(localStorage.getItem('formData'));
+    let html = '';
+    for (let key in data) {
+      html += `<p>${key}: ${data[key]}</p>`;
+    }
+    document.getElementById('data').innerHTML = html;
+    localStorage.removeItem('formData'); 
+  </script>
+</body>
+</html>
